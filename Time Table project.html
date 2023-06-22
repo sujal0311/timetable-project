@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://127.0.0.1:5500/project5.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+</head>
+<body>
+    <table border="1">
+     <thead>
+        <tr><th colspan="8">Time table</th></tr>
+<tr>
+    <th>Day/Lec</th>
+    <th>I<br>09:15 - 09:45</th>
+    <th>II<br>09:45 - 10:30</th>
+    <th>III<br>10:30 - 11:15</th>
+    <th> Lunch<br>11:15 - 12:00</th>
+    <th>IV<br>12:00 - 12:45</th>
+    <th>V<br>12:45 -01:30 </th>
+</tr>
+
+    </thead>
+    <tbody>
+     <tr>
+        <td>Monday</td>
+        <td>English</td>
+        <td>Physics</td>
+        <td rowspan="5">  Lunch</td>
+        <td>Biology</td>
+        <td>Chemistry</td>
+        <td>Maths</td>
+     </tr>
+     <tr>
+        <td>Tuesday</td>
+        <td>English</td>
+        <td>Maths</td>
+        <td>Biology</td>
+        <td>Physics</td>
+        <td>Chemistry</td>
+     </tr>
+     <tr>
+        <td>Wednesday</td>
+        <td>Biology</td>
+        <td>Chemistry</td>
+        <td>Maths</td>
+        <td>English</td>
+        <td>Art class</td>
+   
+     </tr>
+     <tr>
+        <td>Thursday</td>
+        <td>Physics</td>
+        <td>Maths</td>
+        <td>Chemistry</td>
+        <td>English</td>
+        <td>Biology</td>
+   
+     </tr>
+     <tr>
+        <td>FRIDAY</td>
+        <td>Maths</td>
+        <td>Chemistry</td>
+        <td>Biology</td>
+        <td>English</td>
+        <td>Physics</td>
+   
+     </tr>
+     <tr>
+        <td>Saturday</td>
+        <td>Chemistry</td>
+        <td>P.T</td>
+        <td colspan="4">    No lectures</td>
+     </tr>
+    </tbody>
+    </table>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
